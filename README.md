@@ -8,5 +8,5 @@
 *link : https://pythonkim.tistory.com/131?category=703510*
 
 2. pb to tflite  
-*link : https://ebbnflow.tistory.com/172
+*link : https://ebbnflow.tistory.com/172*
 
