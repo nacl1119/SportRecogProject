@@ -5,10 +5,10 @@
 ### 참고자료
 
 1. 텐서플로 모델 안드로이드에서 사용하기  
-*link : https://pythonkim.tistory.com/131?category=703510*
+*link : https://pythonkim.tistory.com/131?category=703510* -> return "오 좋은 링크."
 
 2. pb to tflite  
-*link : https://ebbnflow.tistory.com/172*
+*link : https://ebbnflow.tistory.com/172* -> return "h5를 tflite로 변환 가능하다면 쉽게 되겠는걸."
 
 ### 아이디어
 
