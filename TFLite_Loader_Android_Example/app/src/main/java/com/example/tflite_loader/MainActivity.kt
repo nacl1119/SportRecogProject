@@ -85,6 +85,8 @@ class MainActivity : AppCompatActivity() {
     }
      */
 
+    //TODO: 데이터 타입때문에 classify하다 죽는데, 아래 링크 참고해야함.
+    //https://github.com/ZZANZUPROJECT/TFLite-Object-Detection/blob/master/app/src/main/java/com/example/android/alarmapp/tflite/TensorFlowImageClassifier.java
     fun classify(bitmap: Bitmap) {
 
         val resizedImage = Bitmap.createScaledBitmap(bitmap, 28, 28, true)
