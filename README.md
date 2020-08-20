@@ -10,7 +10,7 @@
 2. pb to tflite  
 *link : https://ebbnflow.tistory.com/172* -> return "h5를 tflite로 변환 가능하다면 쉽게 되겠는걸."
 
-3. 안드로이드에서 tflite 로드하고, 모델 실행하기
+3. 안드로이드에서 tflite 로드하고, 모델 실행하기  
 *link : https://stackoverflow.com/questions/60916714/problem-decoding-the-output-of-a-tflite-model-in-android*
 
 ### 아이디어
