@@ -1,3 +1,12 @@
+# 색칠놀이
+ex) python edge_detection.py --img test5.jpg
+
+
+
+
+
+
+
 # SportRecogProject
 
 재밌게 해봅시다용 -> return "예압" 
