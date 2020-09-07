@@ -1,0 +1,417 @@
+ * Serving Flask app "test_server" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:20000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+118.36.139.123 - - [06/Sep/2020 08:26:12] "[37mGET / HTTP/1.1[0m" 200 -
+112.173.219.66 - - [06/Sep/2020 08:26:38] "[37mGET / HTTP/1.1[0m" 200 -
+112.173.219.66 - - [06/Sep/2020 08:26:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/test_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/test_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/test_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/test_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+118.36.139.123 - - [06/Sep/2020 08:37:48] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/azureuser/Projects/EdgeExtracter/test_server.py", line 6, in hello_world
+    return render_template('index.html')
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+118.36.139.123 - - [06/Sep/2020 08:37:48] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:48] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:48] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:49] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:49] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:49] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/azureuser/Projects/EdgeExtracter/test_server.py", line 6, in hello_world
+    return render_template('index.html')
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+118.36.139.123 - - [06/Sep/2020 08:37:50] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:50] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:50] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:50] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:50] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:50] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/test_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/test_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+118.36.139.123 - - [06/Sep/2020 08:37:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/azureuser/Projects/EdgeExtracter/test_server.py", line 6, in hello_world
+    return render_template('./index.html')
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./index.html
+118.36.139.123 - - [06/Sep/2020 08:37:58] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:58] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:58] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:59] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:59] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:37:59] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/test_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/test_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+118.36.139.123 - - [06/Sep/2020 08:38:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/azureuser/Projects/EdgeExtracter/test_server.py", line 6, in hello_world
+    return render_template('/index.html')
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: /index.html
+118.36.139.123 - - [06/Sep/2020 08:38:05] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:38:05] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:38:05] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:38:05] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:38:05] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:38:05] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/test_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/test_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+118.36.139.123 - - [06/Sep/2020 08:38:51] "[37mGET / HTTP/1.1[0m" 200 -
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/test_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+118.36.139.123 - - [06/Sep/2020 08:39:31] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 08:39:53] "[37mGET / HTTP/1.1[0m" 200 -
+ * Serving Flask app "start_edge_extractor_svr" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:20000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+112.173.219.66 - - [06/Sep/2020 09:03:58] "[37mGET / HTTP/1.1[0m" 200 -
+112.173.219.66 - - [06/Sep/2020 09:04:13] "[37mPOST /uploadImage HTTP/1.1[0m" 200 -
+112.173.219.66 - - [06/Sep/2020 09:04:23] "[35m[1mPOST /uploadImage HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/azureuser/Projects/EdgeExtracter/start_edge_extractor_svr.py", line 22, in uploadImage
+    f.save(f.filename)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/werkzeug/datastructures.py", line 3066, in save
+    dst = open(dst, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: ''
+112.173.219.66 - - [06/Sep/2020 09:04:23] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+112.173.219.66 - - [06/Sep/2020 09:04:23] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+112.173.219.66 - - [06/Sep/2020 09:04:23] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+112.173.219.66 - - [06/Sep/2020 09:04:23] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+112.173.219.66 - - [06/Sep/2020 09:04:23] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+112.173.219.66 - - [06/Sep/2020 09:04:23] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+112.173.219.66 - - [06/Sep/2020 09:04:36] "[37mPOST /uploadImage HTTP/1.1[0m" 200 -
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/start_edge_extractor_svr.py', reloading
+1111111111111
+1111111111111
+1111111111111
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/start_edge_extractor_svr.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/start_edge_extractor_svr.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/start_edge_extractor_svr.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/start_edge_extractor_svr.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+118.36.139.123 - - [06/Sep/2020 09:06:14] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 09:06:17] "[35m[1mPOST /uploadImage HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/azureuser/Projects/EdgeExtracter/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/azureuser/Projects/EdgeExtracter/start_edge_extractor_svr.py", line 30, in uploadImage
+    return send_file(f.filename, mimetype='image/jpeg')
+NameError: name 'send_file' is not defined
+118.36.139.123 - - [06/Sep/2020 09:06:17] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 09:06:17] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 09:06:17] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 09:06:18] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 09:06:18] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 09:06:18] "[37mGET /uploadImage?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/start_edge_extractor_svr.py', reloading
+1111111111111
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+118.36.139.123 - - [06/Sep/2020 09:06:42] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 09:06:46] "[37mPOST /uploadImage HTTP/1.1[0m" 200 -
+193.37.255.114 - - [06/Sep/2020 09:18:37] code 400, message Bad request version ('\x00\x00\x00ñ{\x05d\x05É')
+193.37.255.114 - - [06/Sep/2020 09:18:37] "[35m[1mdÉ    6LdÉ   ÞdÉ   dÉ   wFdÉ   dÉ   õRdÉ   ´XdÉ   \dÉ   ¹dÉ	   ñ{dÉ[0m" HTTPStatus.BAD_REQUEST -
+ * Detected change in '/home/azureuser/Projects/EdgeExtracter/start_edge_extractor_svr.py', reloading
+1111111111111
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 314-269-509
+118.36.139.123 - - [06/Sep/2020 14:53:52] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 14:53:52] "[33mGET /static/css/cover.css HTTP/1.1[0m" 404 -
+118.36.139.123 - - [06/Sep/2020 14:53:52] "[33mGET /static/js/functions.js HTTP/1.1[0m" 404 -
+118.36.139.123 - - [06/Sep/2020 14:53:52] "[33mGET /static/js/networkmanager.js HTTP/1.1[0m" 404 -
+118.36.139.123 - - [06/Sep/2020 14:53:52] "[33mGET /static/js/querymanager.js HTTP/1.1[0m" 404 -
+118.36.139.123 - - [06/Sep/2020 14:53:52] "[33mGET /static/css/cover.css HTTP/1.1[0m" 404 -
+118.36.139.123 - - [06/Sep/2020 14:53:52] "[33mGET /static/js/functions.js HTTP/1.1[0m" 404 -
+118.36.139.123 - - [06/Sep/2020 14:53:52] "[33mGET /static/js/networkmanager.js HTTP/1.1[0m" 404 -
+118.36.139.123 - - [06/Sep/2020 14:53:52] "[33mGET /static/js/querymanager.js HTTP/1.1[0m" 404 -
+118.36.139.123 - - [06/Sep/2020 14:54:32] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:01:59] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:02:41] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:02:43] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:02:47] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:06:50] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:08:05] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:10:02] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:20:03] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:21:24] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:21:29] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:22:05] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:23:43] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:24:44] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:25:10] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:25:11] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:25:39] "[37mGET / HTTP/1.1[0m" 200 -
+167.248.133.49 - - [06/Sep/2020 15:27:02] code 400, message Bad request version ('\x00\x00\x00ñ{\x05d\x05É')
+167.248.133.49 - - [06/Sep/2020 15:27:02] "[35m[1mdÉ    6LdÉ   ÞdÉ   dÉ   wFdÉ   dÉ   õRdÉ   ´XdÉ   \dÉ   ¹dÉ	   ñ{dÉ[0m" HTTPStatus.BAD_REQUEST -
+167.248.133.49 - - [06/Sep/2020 15:27:03] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03B\x9cÒ\x90}\x83Â¯\x0f'ä\x93Ú«c`ÎV\x9fïDl¹\x93#ø*Ñ\x94:¨\x93\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+167.248.133.49 - - [06/Sep/2020 15:27:03] "[35m[1m {  wBÒ}Â¯'äÚ«c`ÎVïDl¹#ø*Ñ:¨  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+167.248.133.49 - - [06/Sep/2020 15:27:05] "[37mGET / HTTP/1.1[0m" 200 -
+167.248.133.49 - - [06/Sep/2020 15:27:05] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:29:15] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [06/Sep/2020 15:29:19] "[37mPOST /uploadImage HTTP/1.1[0m" 200 -
+ * Serving Flask app "start_edge_extractor_svr" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:20000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 151-798-108
+ * Serving Flask app "start_edge_extractor_svr" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:20000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 151-798-108
+192.35.168.219 - - [06/Sep/2020 22:22:35] code 400, message Bad request version ('\x00\x00\x00ñ{\x05d\x05É')
+192.35.168.219 - - [06/Sep/2020 22:22:35] "[35m[1mdÉ    6LdÉ   ÞdÉ   dÉ   wFdÉ   dÉ   õRdÉ   ´XdÉ   \dÉ   ¹dÉ	   ñ{dÉ[0m" HTTPStatus.BAD_REQUEST -
+192.35.168.219 - - [06/Sep/2020 22:22:37] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03$¾½Ù'cÑ©|ä\x12ÓºÙC|²\x83{bE÷>ß\x1aÅÿç«¤\x9c}\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+192.35.168.219 - - [06/Sep/2020 22:22:37] "[35m[1m {  w$¾½Ù'cÑ©|äÓºÙC|²{bE÷>ßÅÿç«¤}  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+192.35.168.219 - - [06/Sep/2020 22:22:38] "[37mGET / HTTP/1.1[0m" 200 -
+192.35.168.219 - - [06/Sep/2020 22:22:39] "[37mGET / HTTP/1.1[0m" 200 -
+74.120.14.52 - - [07/Sep/2020 12:50:33] code 400, message Bad request version ('\x00\x00\x00ñ{\x05d\x05É')
+74.120.14.52 - - [07/Sep/2020 12:50:33] "[35m[1mdÉ    6LdÉ   ÞdÉ   dÉ   wFdÉ   dÉ   õRdÉ   ´XdÉ   \dÉ   ¹dÉ	   ñ{dÉ[0m" HTTPStatus.BAD_REQUEST -
+74.120.14.52 - - [07/Sep/2020 12:50:35] code 400, message Bad request version ('À\x14À')
+74.120.14.52 - - [07/Sep/2020 12:50:35] "[35m[1m {  wÌ&õìÅýæ]ÞûBùTÞM{]	¨à»Çÿ¢y  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+74.120.14.52 - - [07/Sep/2020 12:50:36] "[37mGET / HTTP/1.1[0m" 200 -
+74.120.14.52 - - [07/Sep/2020 12:50:37] "[37mGET / HTTP/1.1[0m" 200 -
