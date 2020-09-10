@@ -29,24 +29,24 @@
       $("#fileElem").click()
     });
 
-
-
   }
 
   function handleFiles(files) {
-    console.log(files)
 
     var fd = new FormData();
     fd.append('file', files[0]);
+
+    console.log("Start!!" + files[0] + "End!!")
 
     $.ajax({
       url: 'http://20.194.105.72:20000/uploadImage',
       type: 'post',
       data: fd,
+      processData: false,  // tell jQuery not to process the data
       contentType: false,
-      processData: false,
       success: function(response) {
-        var file = new Blob([response], {type:'image/*'});
+        console.log(response)
+        var file = new Blob([atob(response)], {type:'image/*'});
         saveAs(file, 'image.jpeg');
       },
     });
@@ -62,10 +62,13 @@
 
 
       <form>
-        <input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+        <input type="file" accept-charset="utf-8" id="fileElem" enctype="multipart/form-data"  multiple accept="image/*" style="display:none"  onchange="handleFiles(this.files)">
       </form>
 
       <button type="button" class="btn btn-outline-primary" id="uploadBtn">업로드하기</button>
+
+      <img id="img" width=100%>
+
     </div>
   </div>
 

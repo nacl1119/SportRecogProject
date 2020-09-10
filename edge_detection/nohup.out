@@ -415,3 +415,130 @@ NameError: name 'send_file' is not defined
 74.120.14.52 - - [07/Sep/2020 12:50:35] "[35m[1m {  wÌ&õìÅýæ]ÞûBùTÞM{]	¨à»Çÿ¢y  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
 74.120.14.52 - - [07/Sep/2020 12:50:36] "[37mGET / HTTP/1.1[0m" 200 -
 74.120.14.52 - - [07/Sep/2020 12:50:37] "[37mGET / HTTP/1.1[0m" 200 -
+ * Serving Flask app "start_edge_extractor_svr" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:20000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 637-162-028
+118.36.139.123 - - [07/Sep/2020 14:58:22] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [07/Sep/2020 14:58:27] "[37mPOST /uploadImage HTTP/1.1[0m" 200 -
+ * Detected change in '/home/kkyy3402/Projects/SportRecogProject/edge_detection/start_edge_extractor_svr.py', reloading
+1111111111111
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 637-162-028
+ * Detected change in '/home/kkyy3402/Projects/SportRecogProject/edge_detection/start_edge_extractor_svr.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 637-162-028
+118.36.139.123 - - [07/Sep/2020 15:01:11] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [07/Sep/2020 15:01:15] "[37mPOST /uploadImage HTTP/1.1[0m" 200 -
+ * Detected change in '/home/kkyy3402/Projects/SportRecogProject/edge_detection/start_edge_extractor_svr.py', reloading
+1111111111111
+ * Restarting with stat
+  File "/home/kkyy3402/Projects/SportRecogProject/edge_detection/start_edge_extractor_svr.py", line 8
+    from edge_edtection
+                      ^
+SyntaxError: invalid syntax
+ * Serving Flask app "start_edge_extractor_svr" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:20000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 637-162-028
+162.142.125.35 - - [07/Sep/2020 17:39:03] code 400, message Bad request version ('\x00\x00\x00ñ{\x05d\x05É')
+162.142.125.35 - - [07/Sep/2020 17:39:03] "[35m[1mdÉ    6LdÉ   ÞdÉ   dÉ   wFdÉ   dÉ   õRdÉ   ´XdÉ   \dÉ   ¹dÉ	   ñ{dÉ[0m" HTTPStatus.BAD_REQUEST -
+162.142.125.35 - - [07/Sep/2020 17:39:05] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Æ&úØ\x9f\x18<\tmÙ©|¬{Æö¶(\x85¥?o$\x1f_3\x9cX¿J|!\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+162.142.125.35 - - [07/Sep/2020 17:39:05] "[35m[1m {  wÆ&úØ<	mÙ©|¬{Æö¶(¥?o$_3X¿J|!  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+162.142.125.35 - - [07/Sep/2020 17:39:06] "[37mGET / HTTP/1.1[0m" 200 -
+162.142.125.35 - - [07/Sep/2020 17:39:06] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [07/Sep/2020 22:48:16] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [07/Sep/2020 22:48:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+118.36.139.123 - - [07/Sep/2020 22:48:21] "[37mPOST /uploadImage HTTP/1.1[0m" 200 -
+118.36.139.123 - - [07/Sep/2020 22:56:01] "[37mGET / HTTP/1.1[0m" 200 -
+118.36.139.123 - - [07/Sep/2020 22:56:05] "[37mPOST /uploadImage HTTP/1.1[0m" 200 -
+195.54.160.223 - - [08/Sep/2020 19:12:28] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+195.54.160.223 - - [08/Sep/2020 19:12:28] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+167.248.133.36 - - [09/Sep/2020 02:19:09] code 400, message Bad request version ('\x00\x00\x00ñ{\x05d\x05É')
+167.248.133.36 - - [09/Sep/2020 02:19:09] "[35m[1mdÉ    6LdÉ   ÞdÉ   dÉ   wFdÉ   dÉ   õRdÉ   ´XdÉ   \dÉ   ¹dÉ	   ñ{dÉ[0m" HTTPStatus.BAD_REQUEST -
+167.248.133.36 - - [09/Sep/2020 02:19:11] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x1frÑ]#Çæ\x927\x95\xa0\x0eÆ\x93Yñdpi\x0e\x063\x82?U\x81Óà\x94-µ[\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+167.248.133.36 - - [09/Sep/2020 02:19:11] "[35m[1m {  wrÑ]#Çæ7 ÆYñdpi3?UÓà-µ[  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+167.248.133.36 - - [09/Sep/2020 02:19:12] "[37mGET / HTTP/1.1[0m" 200 -
+167.248.133.36 - - [09/Sep/2020 02:19:13] "[37mGET / HTTP/1.1[0m" 200 -
+74.120.14.52 - - [09/Sep/2020 02:23:56] code 400, message Bad request version ('\x00\x00\x00ñ{\x05d\x05É')
+74.120.14.52 - - [09/Sep/2020 02:23:56] "[35m[1mdÉ    6LdÉ   ÞdÉ   dÉ   wFdÉ   dÉ   õRdÉ   ´XdÉ   \dÉ   ¹dÉ	   ñ{dÉ[0m" HTTPStatus.BAD_REQUEST -
+74.120.14.52 - - [09/Sep/2020 02:23:58] code 400, message Bad request version ('À\x14À')
+74.120.14.52 - - [09/Sep/2020 02:23:58] "[35m[1m {  wÜÜRNdÂAó?P	yË]"Æb£üO7"~Ó\p  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+74.120.14.52 - - [09/Sep/2020 02:23:59] "[37mGET / HTTP/1.1[0m" 200 -
+74.120.14.52 - - [09/Sep/2020 02:24:00] "[37mGET / HTTP/1.1[0m" 200 -
+5.188.206.18 - - [09/Sep/2020 04:31:35] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+5.188.206.18 - - [09/Sep/2020 04:31:35] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+5.188.206.18 - - [09/Sep/2020 07:26:15] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+5.188.206.18 - - [09/Sep/2020 07:26:15] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+5.188.206.18 - - [09/Sep/2020 10:18:59] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+5.188.206.18 - - [09/Sep/2020 10:18:59] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+192.35.168.250 - - [09/Sep/2020 13:44:54] code 400, message Bad request version ('\x00\x00\x00ñ{\x05d\x05É')
+192.35.168.250 - - [09/Sep/2020 13:44:54] "[35m[1mdÉ    6LdÉ   ÞdÉ   dÉ   wFdÉ   dÉ   õRdÉ   ´XdÉ   \dÉ   ¹dÉ	   ñ{dÉ[0m" HTTPStatus.BAD_REQUEST -
+192.35.168.250 - - [09/Sep/2020 13:44:56] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x031êv-*ßÈ¬Ñ¥Ï\x11£ÖY46\x884÷\x05 7^ úõiÀ\x0e|q\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+192.35.168.250 - - [09/Sep/2020 13:44:56] "[35m[1m {  w1êv-*ßÈ¬Ñ¥Ï£ÖY464÷ 7^ úõiÀ|q  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+192.35.168.250 - - [09/Sep/2020 13:44:57] "[37mGET / HTTP/1.1[0m" 200 -
+192.35.168.250 - - [09/Sep/2020 13:44:57] "[37mGET / HTTP/1.1[0m" 200 -
+167.248.133.50 - - [09/Sep/2020 22:05:37] code 400, message Bad request version ('\x00\x00\x00ñ{\x05d\x05É')
+167.248.133.50 - - [09/Sep/2020 22:05:37] "[35m[1mdÉ    6LdÉ   ÞdÉ   dÉ   wFdÉ   dÉ   õRdÉ   ´XdÉ   \dÉ   ¹dÉ	   ñ{dÉ[0m" HTTPStatus.BAD_REQUEST -
+167.248.133.50 - - [09/Sep/2020 22:05:39] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x16\x1b¡\x05óA\x87`\x8fØ#ûÅÈp¬\tÇ"qÊ\x98¤î\x8bü\x9e<\x93dò\x1f\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+167.248.133.50 - - [09/Sep/2020 22:05:39] "[35m[1m {  w¡óA`Ø#ûÅÈp¬	Ç"qÊ¤îü<dò  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+167.248.133.50 - - [09/Sep/2020 22:05:40] "[37mGET / HTTP/1.1[0m" 200 -
+167.248.133.50 - - [09/Sep/2020 22:05:40] "[37mGET / HTTP/1.1[0m" 200 -
+162.142.125.51 - - [10/Sep/2020 03:14:15] code 400, message Bad request version ('\x00\x00\x00ñ{\x05d\x05É')
+162.142.125.51 - - [10/Sep/2020 03:14:15] "[35m[1mdÉ    6LdÉ   ÞdÉ   dÉ   wFdÉ   dÉ   õRdÉ   ´XdÉ   \dÉ   ¹dÉ	   ñ{dÉ[0m" HTTPStatus.BAD_REQUEST -
+162.142.125.51 - - [10/Sep/2020 03:14:16] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x15\x07×\x0f#v\x0e#QbÓË\xa0£Î¯<\x13Û\x0c\t\x1d*4\x0bPÒÅ\x9dC\x99Ñ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+162.142.125.51 - - [10/Sep/2020 03:14:16] "[35m[1m {  w×#v#QbÓË £Î¯<Û	*4PÒÅCÑ  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+162.142.125.51 - - [10/Sep/2020 03:14:18] "[37mGET / HTTP/1.1[0m" 200 -
+162.142.125.51 - - [10/Sep/2020 03:14:18] "[37mGET / HTTP/1.1[0m" 200 -
+162.142.125.49 - - [10/Sep/2020 11:39:47] code 400, message Bad request version ('\x00\x00\x00ñ{\x05d\x05É')
+162.142.125.49 - - [10/Sep/2020 11:39:47] "[35m[1mdÉ    6LdÉ   ÞdÉ   dÉ   wFdÉ   dÉ   õRdÉ   ´XdÉ   \dÉ   ¹dÉ	   ñ{dÉ[0m" HTTPStatus.BAD_REQUEST -
+162.142.125.49 - - [10/Sep/2020 11:39:49] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03FÞÕjÛÊ\x90±â\x92ìñÙ?rÙ·S\x85\x8466\x0ff¹S\x0fÚ\x82B\x1eº\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+162.142.125.49 - - [10/Sep/2020 11:39:49] "[35m[1m {  wFÞÕjÛÊ±âìñÙ?rÙ·S66f¹SÚBº  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+162.142.125.49 - - [10/Sep/2020 11:39:50] "[37mGET / HTTP/1.1[0m" 200 -
+162.142.125.49 - - [10/Sep/2020 11:39:50] "[37mGET / HTTP/1.1[0m" 200 -
+ * Detected change in '/home/kkyy3402/Projects/SportRecogProject/edge_detection/start_edge_extractor_svr.py', reloading
+1111111111111
+1111111111111
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 637-162-028
+ * Detected change in '/home/kkyy3402/Projects/SportRecogProject/edge_detection/start_edge_extractor_svr.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 637-162-028
+ * Detected change in '/home/kkyy3402/Projects/SportRecogProject/edge_detection/start_edge_extractor_svr.py', reloading
+ * Restarting with stat
+  File "/home/kkyy3402/Projects/SportRecogProject/edge_detection/start_edge_extractor_svr.py", line 32
+    //return send_from_directory(directory=".", filename=f.filename)
+     ^
+SyntaxError: invalid syntax
+ * Serving Flask app "start_edge_extractor_svr" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:20000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 113-299-269
+ * Serving Flask app "start_edge_extractor_svr" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:20000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 113-299-269
