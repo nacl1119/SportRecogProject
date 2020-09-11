@@ -13,8 +13,8 @@ def edge_detection(color_img):
     if max(M, N) > 1500: # 행이나 열이 1500px보다 큰 경우 행과 열 모두 반으로 줄임.
         color_img = cv2.resize(color_img, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA)
 
-    if M > N: # 행이 열보다 길면 오른쪽으로 회전
-        color_img = cv2.rotate(color_img, cv2.ROTATE_90_CLOCKWISE)
+    # if M > N: # 행이 열보다 길면 오른쪽으로 회전
+    #     color_img = cv2.rotate(color_img, cv2.ROTATE_90_CLOCKWISE)
 
     #cv2.imshow('color', color_img)
 

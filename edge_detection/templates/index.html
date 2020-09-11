@@ -3,6 +3,19 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154851687-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154851687-3');
+</script>
+
+  
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -13,6 +26,59 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300&display=swap" rel="stylesheet">
   <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@900&display=swap');
+
+
+    #title {
+        display:block;
+        width:50%;
+        padding: auto;
+        text-align: center;
+        font-family: 'Black Han Sans', sans-serif;
+        font-weight: bolder;
+    }
+
+
+
+    #example {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .row {text-align: center; font-size: 1em; font-family: 'Noto Sans KR', sans-serif;}
+    .btn {font-size: 1em;}
+
+    
+    
+            
+    @media (max-width:500px){
+        #title {
+        display:block;
+        width:50%;
+        padding: auto;
+        text-align: center;
+        font-family: 'Black Han Sans', sans-serif;
+        font-weight: bolder;
+        }
+
+
+        #example {
+            width: 95%;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .row {text-align: center; font-size: 1em; font-family: 'Noto Sans KR', sans-serif;}
+        .btn {font-size: 1.5em;}
+    
+    }
+  </style>
+
 
 </head>
 
@@ -95,7 +161,7 @@
 <!-- 로딩창 시갖 -->
   <div class="modal fade bd-example-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1" id="activityIndicator">
     <div class="modal-dialog modal-lg">
-      <div class="modal-content" style="width: 60px;color:#FFC30F;">
+      <div class="modal-content" style="width: 60px;color:blue;">
         <span class="fa fa-spinner fa-spin fa-4x"></span>
         <br>
         <div class="animated bounce infinite">
@@ -106,19 +172,28 @@
   </div>
 
   <!-- 로딩창 끝 -->
-
+  <div id="title"> 
+    <img src="http://20.194.105.72:20000/static/img/title.png" alt="title" width="100%">
+  </div>
+  
+  <div id="example">
+      <img src="https://github.com/kyohoonsim/GoodFatherTest/blob/master/example.jpg?raw=true"  alt="example" width="100%">
+  </div>
 
   <div class="row h-100">
     <div class="col-sm-12 my-auto">
-      <p> 그림그리기 연습할 사진을 업로드해주세요 </p>
+      <p>색칠 놀이에 사용할 이미지를 업로드 해주세요.</p>
       <form>
         <input type="file" accept-charset="utf-8" id="fileElem" enctype="multipart/form-data" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
       </form>
-      <button type="button" class="btn btn-outline-primary" id="uploadBtn">업로드하기</button>
+      <button type="button" class="btn btn-outline-primary" id="uploadBtn">업로드</button>
       <img id="img" width=100%>
     </div>
   </div>
 
+  <div>
+    <!--쿠팡광고 자리-->
+  </div>
 </body>
 
 </html>
