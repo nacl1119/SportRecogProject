@@ -25,13 +25,23 @@
   function setEvents() {
     $("#uploadBtn").click(function() {
       //파일 선택창을 연다.
-
+      console.log("uploadBtn Tapped")
       $("#fileElem").click()
     });
 
   }
 
+  function showLoadingIndicator(visible) {
+    if (visible) {
+      $('#activityIndicator').modal('show');
+    } else {
+      $('#activityIndicator').modal('hide');
+    }
+  }
+
   function handleFiles(files) {
+
+    showLoadingIndicator(true)
 
     var fd = new FormData();
     fd.append('file', files[0]);
@@ -42,12 +52,38 @@
       url: 'http://20.194.105.72:20000/uploadImage',
       type: 'post',
       data: fd,
-      processData: false,  // tell jQuery not to process the data
+      processData: false, // tell jQuery not to process the data
       contentType: false,
-      success: function(response) {
-        console.log(response)
-        var file = new Blob([atob(response)], {type:'image/*'});
-        saveAs(file, 'image.jpeg');
+      xhrFields: {
+        responseType: 'blob'
+      },
+
+      success: function(result) {
+        var saveByteArray = (function() {
+          var a = document.createElement("a");
+          document.body.appendChild(a);
+          a.style = "display: none";
+          return function(data, name) {
+            var blob = new Blob(data, {
+                type: "octet/stream"
+              }),
+              url = window.URL.createObjectURL(blob);
+            //console.log(url)
+            a.href = url;
+            a.download = name;
+            a.click();
+            window.URL.revokeObjectURL(url);
+
+            console.log(url)
+          };
+        })();
+
+        saveByteArray([result], 'image.jpeg');
+
+        //다운로드 이후 input태그 초기화 시켜준다.(초기화 안하면 딱 한번밖에 다운이 안됨)
+        $("#fileElem").val("")
+        showLoadingIndicator(false)
+
       },
     });
 
@@ -56,23 +92,32 @@
 
 <body>
 
-  <div class="row h-100">
-    <div class="col-sm-12 my-auto">
-      <p> 사진을 업로드해주세요 </p>
-
-
-      <form>
-        <input type="file" accept-charset="utf-8" id="fileElem" enctype="multipart/form-data"  multiple accept="image/*" style="display:none"  onchange="handleFiles(this.files)">
-      </form>
-
-      <button type="button" class="btn btn-outline-primary" id="uploadBtn">업로드하기</button>
-
-      <img id="img" width=100%>
-
+<!-- 로딩창 시갖 -->
+  <div class="modal fade bd-example-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1" id="activityIndicator">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="width: 60px;color:#FFC30F;">
+        <span class="fa fa-spinner fa-spin fa-4x"></span>
+        <br>
+        <div class="animated bounce infinite">
+          <p id="loading_text" style="font-family: 'NanumSquare', sans-serif;">처리중..</p>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- 로딩창 끝 -->
 
+
+  <div class="row h-100">
+    <div class="col-sm-12 my-auto">
+      <p> 그림그리기 연습할 사진을 업로드해주세요 </p>
+      <form>
+        <input type="file" accept-charset="utf-8" id="fileElem" enctype="multipart/form-data" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+      </form>
+      <button type="button" class="btn btn-outline-primary" id="uploadBtn">업로드하기</button>
+      <img id="img" width=100%>
+    </div>
+  </div>
 
 </body>
 

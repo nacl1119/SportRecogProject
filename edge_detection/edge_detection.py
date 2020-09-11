@@ -1,5 +1,6 @@
 import numpy as np
 import timeit
+import cv2
 
 def edge_detection(color_img):
     start_time = timeit.default_timer()  # 시간 측정 시작
@@ -61,7 +62,6 @@ def edge_detection(color_img):
 
 if __name__ == '__main__':
     import argparse
-    import cv2
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--img', type=str, default='test5.jpg')

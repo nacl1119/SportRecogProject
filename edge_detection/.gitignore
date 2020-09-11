@@ -1,0 +1,5 @@
+venv
+*.jpeg 
+*.jpg
+nohup.out
+__pycache__
