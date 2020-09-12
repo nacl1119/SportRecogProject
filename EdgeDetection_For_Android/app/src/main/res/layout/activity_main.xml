@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_ac_b"
+            android:text="색칠 공부"
+            android:textColor="#333333"
+            android:textSize="36sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/nanum_square_ac_b"
+            android:text="우리 아이만의 색칠공부를 만들어 보세요!"
+            android:textColor="#a7a7a7"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/non_processed_dooly" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/processed_dooly" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/activity_main_start_process_btn"
+        android:layout_weight="0"
+        android:text="시작하기"
+        android:layout_margin="10dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/corner_radius_16dp"
+        android:backgroundTint="#44c1ff"
+        android:fontFamily="@font/nanum_square_ac_b"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+
+
+</LinearLayout>
