@@ -9,13 +9,13 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.edgedetection_for_android.Popup.LoadingPopupFragment
 import com.example.edgedetection_for_android.R
@@ -32,6 +32,9 @@ import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.OutputStream
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.*
 
 
 val IMAGE_PICK_CODE = 1000
@@ -168,6 +171,27 @@ class ProcessActivity : AppCompatActivity() {
 
     }
 
+    private fun showCompleteSavePopup(){
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+
+        builder.setTitle("저장 완료").setMessage("저장이 완료되었습니다. 저장된 폴더로 이동할까요?")
+
+        builder.setPositiveButton("OK") { dialog, id ->
+            //Toast.makeText(applicationContext, "OK Click", Toast.LENGTH_SHORT).show()
+            val intent = Intent()
+            intent.type = "image/*"
+            intent.action = Intent.ACTION_GET_CONTENT
+            startActivity(intent)
+        }
+
+        builder.setNegativeButton("Cancel") { dialog, id ->
+            //Toast.makeText(applicationContext, "Cancel Click", Toast.LENGTH_SHORT).show()
+        }
+
+        val alertDialog: AlertDialog = builder.create()
+        alertDialog.show()
+    }
+
 
     //갤러리에서 선택한 이미지의 데이터가 여기로 전달된다.
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -210,7 +234,10 @@ class ProcessActivity : AppCompatActivity() {
             filesDir.absolutePath
         }
 
-        val file = File(baseFolder + File.separator.toString() + "output.jpg")
+        val sdf = SimpleDateFormat("yyyyddMM_hhmmss")
+        val currentDate = sdf.format(Date())
+
+        val file = File(baseFolder + File.separator.toString() + "output_$currentDate.jpg")
         file.parentFile.mkdirs()
 
         val fos = FileOutputStream(file)
