@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,124 +8,143 @@
     android:orientation="vertical"
     tools:context=".Activities.ProcessActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_marginVertical="16dp"
             android:orientation="vertical"
             android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:text="사진 업로드하기"
-                android:textSize="24sp"
-                android:fontFamily="@font/nanum_square_ac_b"
-                android:textColor="#333333"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_marginTop="14dp"
-                android:text="사진을 업로드해주세요"
-                android:textSize="18sp"
-                android:fontFamily="@font/nanum_square_ac_b"
-                android:textColor="#a7a7a7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:gravity="center"
-            android:id="@+id/activity_process_start_process_layout"
-            android:background="@drawable/border_background"
-            android:orientation="vertical"
-            android:layout_width="300dp"
-            android:layout_height="300dp">
-
             <LinearLayout
-                android:gravity="center"
+                android:layout_marginVertical="16dp"
                 android:orientation="vertical"
-                android:id="@+id/activity_process_start_process_layout_no_image_layout"
+                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:background="@drawable/ic_add_photo_img_btn"
-                    android:backgroundTint="#a7a7a7"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"/>
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/activity_process_start_process_layout_description_text"
-                    android:layout_marginTop="20dp"
-                    android:text="이곳을 눌러 사진을 추가해주세요!"
+                    android:text="사진 업로드하기"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/nanum_square_ac_b"
+                    android:textColor="#333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="14dp"
+                    android:text="사진을 업로드해주세요"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/nanum_square_ac_b"
+                    android:textColor="#a7a7a7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/activity_process_start_process_layout_original_image_layout"
-                android:visibility="gone"
                 android:gravity="center"
+                android:id="@+id/activity_process_start_process_layout"
+                android:background="@drawable/border_background"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="300dp"
+                android:layout_height="300dp">
 
-                <ImageView
-                    android:id="@+id/activity_process_start_process_layout_original_image"
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/activity_process_start_process_layout_no_image_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"></ImageView>
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:background="@drawable/ic_add_photo_img_btn"
+                        android:backgroundTint="#a7a7a7"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"/>
+
+                    <TextView
+                        android:id="@+id/activity_process_start_process_layout_description_text"
+                        android:layout_marginTop="20dp"
+                        android:text="이곳을 눌러 사진을 추가해주세요!"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_process_start_process_layout_original_image_layout"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/activity_process_start_process_layout_original_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></ImageView>
+
+                </LinearLayout>
+
 
             </LinearLayout>
 
 
-        </LinearLayout>
 
-
-
-        <Button
-            android:visibility="gone"
-            android:layout_margin="10dp"
-            android:id="@+id/activity_process_upload_btn"
-            android:text="업로드하기"
-            android:background="@drawable/corner_radius_16dp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#44c1ff"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"/>
-
-        <LinearLayout
-            android:visibility="gone"
-            android:id="@+id/activity_process_preview_processed_image_download"
-            android:orientation="horizontal"
-            android:layout_width="300dp"
-            android:layout_height="300dp">
-
-            <ImageView
-                android:id="@+id/activity_process_processed_image"
+            <Button
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:id="@+id/activity_process_upload_btn"
+                android:text="업로드하기"
+                android:background="@drawable/corner_radius_16dp"
+                android:textColor="#ffffff"
+                android:backgroundTint="#44c1ff"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/activity_process_preview_processed_image_download"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="300dp">
+
+                <ImageView
+                    android:id="@+id/activity_process_processed_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/activity_process_download_processed_image"
+                android:text="다운받기"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_radius_16dp"
+                android:textColor="#ffffff"
+                android:backgroundTint="#44c1ff"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
 
         </LinearLayout>
 
-        <Button
-            android:visibility="gone"
-            android:id="@+id/activity_process_download_processed_image"
-            android:text="다운받기"
-            android:layout_margin="10dp"
-            android:background="@drawable/corner_radius_16dp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#44c1ff"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+    </ScrollView>
 
-    </LinearLayout>
 
-</ScrollView>
+
+</LinearLayout>
