@@ -17,6 +17,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.edgedetection_for_android.Popup.LoadingPopupFragment
 import com.example.edgedetection_for_android.R
 import com.example.edgedetection_for_android.Utils.DEFINES

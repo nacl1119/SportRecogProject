@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import com.example.edgedetection_for_android.R
 import kotlin.properties.Delegates
@@ -28,6 +29,8 @@ object LoadingPopupFragment : DialogFragment() {
 
         mView = inflater.inflate(R.layout.fragment_loading_popup, container, false)
         // Inflate the layout for this fragment
+        dialog!!.window!!.setBackgroundDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.corner_radius_16dp))
+        //mView!!.background =
         return mView
     }
 

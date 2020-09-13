@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nanum_square_ac_b"
-            android:text="색칠 공부"
+            android:text="DIY 색칠공부"
             android:textColor="#333333"
             android:textSize="36sp" />
 
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:fontFamily="@font/nanum_square_ac_b"
-            android:text="우리 아이만의 색칠공부를 만들어 보세요!"
+            android:text="나만의 색칠공부를 만들어 보세요!"
             android:textColor="#a7a7a7"
             android:textSize="18sp" />
 

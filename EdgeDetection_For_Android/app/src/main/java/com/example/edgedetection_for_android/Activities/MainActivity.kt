@@ -1,5 +1,6 @@
 package com.example.edgedetection_for_android.Activities
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,24 @@ class MainActivity : AppCompatActivity() {
 
         initGoogleAd()
         initWidgets()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+
+        builder.setTitle("앱 종료").setMessage("앱을 종료하시겠습니까?")
+
+        builder.setPositiveButton("OK") { dialog, id ->
+
+        }
+
+        builder.setNegativeButton("Cancel") { dialog, id -> }
+
+        val alertDialog: AlertDialog = builder.create()
+        alertDialog.show()
+
     }
 
     private fun initGoogleAd() {
