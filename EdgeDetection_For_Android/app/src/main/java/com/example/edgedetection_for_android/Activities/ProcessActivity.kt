@@ -2,6 +2,7 @@ package com.example.edgedetection_for_android.Activities
 
 import android.Manifest
 import android.app.Activity
+import android.app.DownloadManager
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
@@ -14,10 +15,8 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.example.edgedetection_for_android.Popup.LoadingPopupFragment
 import com.example.edgedetection_for_android.R
 import com.example.edgedetection_for_android.Utils.DEFINES
@@ -35,7 +34,6 @@ import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.OutputStream
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
 import java.util.*
 
 
@@ -49,6 +47,8 @@ class ProcessActivity : AppCompatActivity() {
     var mSelectedImgURI: Uri? = null
     var mPopupWindow: LoadingPopupFragment? = null
     var mHTTPClient = OkHttpClient()
+    var mSavedFileURL = ""
+
     lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,8 +91,11 @@ class ProcessActivity : AppCompatActivity() {
         }
 
         activity_process_download_processed_image.setOnClickListener {
+
             copyToDownloadFolder()
-            Toast.makeText(applicationContext,"Download 폴더에 저장이 완료되었습니다.",Toast.LENGTH_SHORT).show()
+            showCompleteSavePopup()
+
+            //Toast.makeText(applicationContext,"Download 폴더에 저장이 완료되었습니다.",Toast.LENGTH_SHORT).show()
         }
 
     }
@@ -217,11 +220,26 @@ class ProcessActivity : AppCompatActivity() {
         builder.setTitle("저장 완료").setMessage("저장이 완료되었습니다. 저장된 폴더로 이동할까요?")
 
         builder.setPositiveButton("OK") { dialog, id ->
-            //Toast.makeText(applicationContext, "OK Click", Toast.LENGTH_SHORT).show()
-            val intent = Intent()
-            intent.type = "image/*"
-            intent.action = Intent.ACTION_GET_CONTENT
-            startActivity(intent)
+
+            /*
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+            intent.addCategory(Intent.CATEGORY_OPENABLE)
+
+             */
+            //intent.type = "*/*"
+            //startActivityForResult(intent, 4000)
+
+             var i = Intent(Intent.ACTION_OPEN_DOCUMENT);
+            i.setType("image/*"); //여러가지 Type은 아래 표로 정리해두었습니다.
+            i.addCategory(Intent.CATEGORY_OPENABLE);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+
+            //startActivity(i)
+            //startActivityForResult(Intent.createChooser(i, "Get Album"), 3000)
+
+            startActivity(Intent(DownloadManager.ACTION_VIEW_DOWNLOADS))
+
+
         }
 
         builder.setNegativeButton("Cancel") { dialog, id ->
@@ -277,7 +295,9 @@ class ProcessActivity : AppCompatActivity() {
         val sdf = SimpleDateFormat("yyyyddMM_hhmmss")
         val currentDate = sdf.format(Date())
 
-        val file = File(baseFolder + File.separator.toString() + "output_$currentDate.jpg")
+        mSavedFileURL = baseFolder + File.separator.toString() + "output_$currentDate.jpg"
+
+        val file = File(mSavedFileURL)
         file.parentFile.mkdirs()
 
         val fos = FileOutputStream(file)
