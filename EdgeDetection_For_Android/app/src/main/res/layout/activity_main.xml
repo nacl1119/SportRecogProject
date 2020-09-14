@@ -47,13 +47,13 @@
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_marginTop="40dp"
-            android:src="@drawable/non_processed_dooly" />
+            android:src="@drawable/main_image_original" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/processed_dooly" />
+            android:src="@drawable/main_image_processed" />
 
     </LinearLayout>
 

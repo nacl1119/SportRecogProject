@@ -2,7 +2,6 @@ package com.example.edgedetection_for_android.Activities
 
 import android.Manifest
 import android.app.Activity
-import android.app.DownloadManager
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
@@ -12,6 +11,7 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
+import android.os.StrictMode
 import android.provider.MediaStore
 import android.util.Log
 import android.view.View
@@ -39,6 +39,7 @@ import java.util.*
 
 val IMAGE_PICK_CODE = 1000
 val PERMISSION_REQ_CODE = 2000
+val SELECT_PROCESSED_IMG_CODE = 3000
 val ORIGIN_IMG_NAME_PREFIX = "origin_"
 val PROCESSED_IMG_NAME_PREFIX = "processed_"
 
@@ -54,6 +55,9 @@ class ProcessActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_process)
+
+        var builder = StrictMode.VmPolicy.Builder()
+        StrictMode.setVmPolicy(builder.build())
 
         checkPermission()
         initWidgets()
@@ -92,11 +96,23 @@ class ProcessActivity : AppCompatActivity() {
 
         activity_process_download_processed_image.setOnClickListener {
 
-            copyToDownloadFolder()
-            showCompleteSavePopup()
 
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+            intent.setDataAndType(Uri.fromFile(File(mSavedFileURL)), "image/*")
+            startActivityForResult(intent, SELECT_PROCESSED_IMG_CODE)
+
+            //showCompleteSavePopup()
             //Toast.makeText(applicationContext,"Download 폴더에 저장이 완료되었습니다.",Toast.LENGTH_SHORT).show()
         }
+
+        activity_process_preview_processed_image_download.setOnClickListener {
+            val intent = Intent()
+            intent.action = Intent.ACTION_VIEW
+            intent.setDataAndType(Uri.fromFile(File(mSavedFileURL)), "image/*")
+            startActivity(intent)
+        }
+
+
 
     }
 
@@ -190,6 +206,7 @@ class ProcessActivity : AppCompatActivity() {
                         }
 
                         response.body!!.close()
+                        copyToDownloadFolder()
 
                         CoroutineScope(Dispatchers.Main).launch {
 
@@ -229,16 +246,21 @@ class ProcessActivity : AppCompatActivity() {
             //intent.type = "*/*"
             //startActivityForResult(intent, 4000)
 
-             var i = Intent(Intent.ACTION_OPEN_DOCUMENT);
-            i.setType("image/*"); //여러가지 Type은 아래 표로 정리해두었습니다.
-            i.addCategory(Intent.CATEGORY_OPENABLE);
-            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 
-            //startActivity(i)
-            //startActivityForResult(Intent.createChooser(i, "Get Album"), 3000)
+            //var i = Intent(Intent.ACTION_OPEN_DOCUMENT)
+            //i.setType("image/*"); //여러가지 Type은 아래 표로 정리해두었습니다.
+            //i.addCategory(Intent.CATEGORY_OPENABLE)
+            //i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 
-            startActivity(Intent(DownloadManager.ACTION_VIEW_DOWNLOADS))
+            //startActivity(Intent(DownloadManager.ACTION_VIEW_DOWNLOADS))
 
+
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+            //intent.action = Intent.ACTION_VIEW
+            intent.setDataAndType(Uri.fromFile(File(mSavedFileURL)), "image/*")
+            //startActivity(intent)
+
+            startActivityForResult(intent, SELECT_PROCESSED_IMG_CODE)
 
         }
 
@@ -279,6 +301,13 @@ class ProcessActivity : AppCompatActivity() {
                 ){
                     checkPermission()
                 }
+            }
+
+            SELECT_PROCESSED_IMG_CODE->{
+                val intent = Intent()
+                intent.action = Intent.ACTION_VIEW
+                intent.setDataAndType(Uri.fromFile(File(mSavedFileURL)), "image/*")
+                startActivity(intent)
             }
         }
 

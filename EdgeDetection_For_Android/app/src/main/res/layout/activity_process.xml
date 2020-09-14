@@ -134,7 +134,7 @@
             <Button
                 android:visibility="gone"
                 android:id="@+id/activity_process_download_processed_image"
-                android:text="다운받기"
+                android:text="앨범 보기"
                 android:layout_margin="10dp"
                 android:background="@drawable/corner_radius_16dp"
                 android:textColor="#ffffff"
