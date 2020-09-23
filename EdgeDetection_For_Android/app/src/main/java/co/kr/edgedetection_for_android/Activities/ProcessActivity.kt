@@ -1,4 +1,4 @@
-package com.example.edgedetection_for_android.Activities
+package co.kr.edgedetection_for_android.Activities
 
 import android.Manifest
 import android.app.Activity
@@ -17,9 +17,9 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.edgedetection_for_android.Popup.LoadingPopupFragment
-import com.example.edgedetection_for_android.R
-import com.example.edgedetection_for_android.Utils.DEFINES
+import co.kr.edgedetection_for_android.Popup.LoadingPopupFragment
+import com.kr.edgedetection_for_android.R
+import co.kr.edgedetection_for_android.Utils.DEFINES
 import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.activity_process.*
 import kotlinx.coroutines.CoroutineScope
@@ -99,7 +99,9 @@ class ProcessActivity : AppCompatActivity() {
 
             val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
             intent.setDataAndType(Uri.fromFile(File(mSavedFileURL)), "image/*")
-            startActivityForResult(intent, SELECT_PROCESSED_IMG_CODE)
+            startActivityForResult(intent,
+                SELECT_PROCESSED_IMG_CODE
+            )
 
             //showCompleteSavePopup()
             //Toast.makeText(applicationContext,"Download 폴더에 저장이 완료되었습니다.",Toast.LENGTH_SHORT).show()
@@ -221,8 +223,6 @@ class ProcessActivity : AppCompatActivity() {
 
                             visiblePopupWindow(false)
 
-
-
                         }
                     }
                 }
@@ -260,7 +260,9 @@ class ProcessActivity : AppCompatActivity() {
             intent.setDataAndType(Uri.fromFile(File(mSavedFileURL)), "image/*")
             //startActivity(intent)
 
-            startActivityForResult(intent, SELECT_PROCESSED_IMG_CODE)
+            startActivityForResult(intent,
+                SELECT_PROCESSED_IMG_CODE
+            )
 
         }
 
@@ -278,7 +280,7 @@ class ProcessActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         when(requestCode){
-            IMAGE_PICK_CODE->{
+            IMAGE_PICK_CODE ->{
                 if(resultCode == Activity.RESULT_OK){
                     try {
                         mSelectedImgURI = data!!.data
@@ -295,7 +297,7 @@ class ProcessActivity : AppCompatActivity() {
                     }
                 }
             }
-            PERMISSION_REQ_CODE->{
+            PERMISSION_REQ_CODE ->{
                 if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED
                     || checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED
                 ){
@@ -303,7 +305,7 @@ class ProcessActivity : AppCompatActivity() {
                 }
             }
 
-            SELECT_PROCESSED_IMG_CODE->{
+            SELECT_PROCESSED_IMG_CODE ->{
                 val intent = Intent()
                 intent.action = Intent.ACTION_VIEW
                 intent.setDataAndType(Uri.fromFile(File(mSavedFileURL)), "image/*")
@@ -381,7 +383,9 @@ class ProcessActivity : AppCompatActivity() {
         ){
             //외부 저장소 읽기, 쓰기 런타임 권한을 요청한다.
             val permissions = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-            requestPermissions(permissions, PERMISSION_REQ_CODE)
+            requestPermissions(permissions,
+                PERMISSION_REQ_CODE
+            )
         }
 
     }

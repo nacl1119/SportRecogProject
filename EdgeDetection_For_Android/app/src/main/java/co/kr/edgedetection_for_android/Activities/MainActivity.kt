@@ -1,10 +1,10 @@
-package com.example.edgedetection_for_android.Activities
+package co.kr.edgedetection_for_android.Activities
 
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.edgedetection_for_android.R
+import com.kr.edgedetection_for_android.R
 import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.activity_main.*
 

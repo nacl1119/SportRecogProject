@@ -1,4 +1,4 @@
-package com.example.edgedetection_for_android.Popup
+package co.kr.edgedetection_for_android.Popup
 
 
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
-import com.example.edgedetection_for_android.R
+import com.kr.edgedetection_for_android.R
 import kotlin.properties.Delegates
 
 
